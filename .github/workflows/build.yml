@@ -1,4 +1,4 @@
-name: deploy
+name: ecr-push
 
 on: push
 
