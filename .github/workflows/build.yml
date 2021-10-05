@@ -2,10 +2,6 @@ name: deploy
 
 on: [push]
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   build:
     runs-on: ubuntu-latest
