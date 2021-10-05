@@ -4,7 +4,7 @@ on: push
 
 jobs:
 
-  build:
+  build-image:
 
     runs-on: ubuntu-latest
 
@@ -33,3 +33,9 @@ jobs:
           aws ecr-public get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
           docker build -t $ECR_REPOSITORY:latest .
           docker push $ECR_REPOSITORY:latest
+
+workflows:
+  build-and-release:
+    jobs:
+      - build-image:
+          name: tactlabs-workflow
