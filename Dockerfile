@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-LABEL maintainer="Douglas Trajano <douglas.trajano@outlook.com>"
+LABEL maintainer="tactlabs"
 
 USER root
 

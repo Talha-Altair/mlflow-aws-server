@@ -11,8 +11,8 @@ resource "aws_apprunner_service" "server" {
     auto_deployments_enabled = false
 
     image_repository {
-      image_identifier      = "public.ecr.aws/t9j8s4z8/mlflow:latest"
-      image_repository_type = "ECR_PUBLIC"
+      image_identifier      = "030923948224.dkr.ecr.ap-southeast-1.amazonaws.com/mlflow-server:latest"
+      image_repository_type = "ECR"
 
       image_configuration {
         port = local.app_port
